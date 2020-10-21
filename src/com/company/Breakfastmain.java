@@ -33,30 +33,16 @@ public class Breakfastmain {
                     break;
             }
         }
-        if (srt==true) {
-            Arrays.sort(breakfast, new Comparator() {
-                public int compare(Object o1, Object o2)
-                {
-                    if (o1 == null || String.valueOf((Food)o2).charAt(0) < String.valueOf((Food)o1).charAt(0))
-                    {
-                        return -1;
-                    }
+       if (srt==true) {
+            Arrays.sort(breakfast, new FoodComparator()) ;
 
-                    if (o2 == null || String.valueOf((Food)o2).charAt(0) > String.valueOf((Food)o1).charAt(0))
-                    {
-                        return 1;
-                    }
-                    else return 0;
-                }
-            });
 
             System.out.println("отсортированный завтрак :");
             for (Food item : breakfast)
             {
                 if (item != null)
                 {
-                    if (item.calculateCalories()==0.0)
-                        continue;
+
                     item.consume();
                     System.out.println(" " + item.calculateCalories());
                 }
