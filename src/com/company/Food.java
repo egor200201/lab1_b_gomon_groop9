@@ -1,6 +1,8 @@
 package com.company;
 
-public abstract class Food implements Consumable, Nutritous {
+import java.util.Arrays;
+
+public abstract class Food implements Consumable, Nutritous{
 
     String name = null;
 
@@ -21,6 +23,7 @@ public abstract class Food implements Consumable, Nutritous {
     public String getName() {
         return name;
     }
+
 
     public void setName(String name) {
         this.name = name;

@@ -16,4 +16,6 @@ public class Cheese extends Food {
         System.out.print(this + " eaten");
     }
 
+
+
 }

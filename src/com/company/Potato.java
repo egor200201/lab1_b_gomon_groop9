@@ -1,10 +1,11 @@
 package com.company;
+import java.util.Arrays;
 
-public class Potato extends Food {
+public class Potato  extends Food implements Nutritous {
     public void consume() {
         System.out.print(this + " eaten");
     }
-    private String type;
+    public String type;
     private Double calories = null;
 
     public String getType() {
@@ -15,20 +16,21 @@ public class Potato extends Food {
     }
     public double calculateCalories()
     {
-        if(type.equals("fried"))
+        if(type.equals("Fried"))
         {
             calories = 192.0;
         }
-        else if(type.equals("boiled"))
+        else if(type.equals("Boiled"))
         {
             calories = 82.0;
         }
-        else if(type.equals("french fries"))
+        else if(type.equals("French fries"))
         {
             calories = 400.0;
         }
         return calories;
     }
+
     public Potato(String type) {
         super("Potato");
         this.type = type;

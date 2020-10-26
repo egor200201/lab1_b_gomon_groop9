@@ -33,8 +33,9 @@ public class Breakfastmain {
                     break;
             }
         }
-       if (srt==true) {
-            Arrays.sort(breakfast, new FoodComparator()) ;
+        if (srt==true) {
+
+            Arrays.sort(breakfast, new FoodComparator());
 
 
             System.out.println("отсортированный завтрак :");
