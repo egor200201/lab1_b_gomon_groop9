@@ -33,24 +33,15 @@ public class Breakfastmain {
                     break;
             }
         }
-        if (srt==true) {
-
+        if (srt==true)
+        {
             Arrays.sort(breakfast, new FoodComparator());
 
 
             System.out.println("отсортированный завтрак :");
-            for (Food item : breakfast)
-            {
-                if (item != null)
-                {
 
-                    item.consume();
-                    System.out.println(" " + item.calculateCalories());
-                }
-            }
         }
-        if (!srt)
-        {
+
             System.out.println("breakfast: ");
             for (Food item : breakfast) {
                 if (item != null)
@@ -59,7 +50,7 @@ public class Breakfastmain {
                     System.out.println(" " + item.calculateCalories());
                 }
             }
-        }
+
         if (cls)
         {
             double AllCalories = 0.0;
